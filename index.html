@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Tiruan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Menambahkan styling untuk teks di bawah */
+    .footer-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #fff; /* Warna teks putih */
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="overlay">
+      <header>
+        <img class="logo" src="logo.png" alt="logo">
+        <button id="loginButton">Masuk</button>
+      </header>
+      <div class="content">
+        <h2>Hallo Meiyana Dwita.... </h2>
+        <p>"Hii, Sayangg apa kabar, Sehat Sehat yaww CANTIKK.</p>
+        <p>Semangat UAS nya, Jangan lupa belajar terus yaa."</p>
+        <form id="subscribeForm">
+          <input type="text" placeholder="Siapa Pacar Kamu" required>
+          <button type="submit">Mulai ></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tanggal</h2>
+      <form id="loginForm">
+        <input type="date" placeholder="Tanggal Jadian" required>
+        <button type="submit">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Teks footer ditambahkan di bawah -->
+  <div class="footer-text">© 2025 Kita Balikan.</div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginButton = document.getElementById('loginButton');
+      const loginModal = document.getElementById('loginModal');
+      const closeModal = document.querySelector('.close');
+  
+      loginButton.addEventListener('click', () => {
+        loginModal.style.display = 'flex';
+      });
+  
+      closeModal.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+      });
+  
+      window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+          loginModal.style.display = 'none';
+        }
+      });
+  
+      const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Masuk Berhasil! Selamat menikmati layanan kami!');
+        // Navigasi ke halaman kedua
+        window.location.href = "halaman kedua/halamankedua.html";
+      });
+    });
+  </script>
+</body>
+</html>

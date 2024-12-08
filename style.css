@@ -1,0 +1,156 @@
+/* Reset Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    background-image: url(Teks\ paragraf\ Anda\ \(2\).png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Bagian Latar Belakang */
+.background {
+    height: 100vh;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/947b0f50-f975-488b-9256-ef49f4045e16/cb2189ef-e7a1-48e3-a4f3-c4de0700b774/ID-en-20230821-popsignuptwoweeks-perspective_alpha_website_medium.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+header button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: #f40612;
+}
+
+.content {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.content h2 {
+    text-align: left;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 2.5rem;
+}
+
+.content p {
+    text-align: left;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 1rem;
+}
+
+.content form {
+    display: flex;
+    justify-content: center;
+}
+
+.content form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.content form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.content form button:hover {
+    background-color: #f40612;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #f40612;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
